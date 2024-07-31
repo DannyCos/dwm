@@ -18,14 +18,9 @@ static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
-	/*               	fg        	bg         	border   */
-	[SchemeNorm] = 		{ "#000000",	"#000000", 	"#1e1e2e" },
-	[SchemeSel]  = 		{ "#000000",	"#000000", 	"#89dceb"  },
-	[SchemeStatus]  =	{ "#f5e0dc", 	"#1e1e2e",  	"#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = 	{ "#313244", 	"#fab387",  	"#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-	[SchemeTagsNorm]  = 	{ "#f5e0dc", 	"#1e1e2e",  	"#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-	[SchemeInfoSel]  = 	{ "#f5e0dc", 	"#313244",  	"#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-	[SchemeInfoNorm]  = 	{ "#f5e0dc", 	"#1e1e2e",  	"#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	/*               fg        	 bg         	border   */
+	[SchemeNorm] = { "#b4befe",	"#1E1E2E", 	"#1e1e2e" },
+	[SchemeSel]  = { "#1e1e2e",	"#eba0ac", 	"#89dceb"  },
 };
 
 /* tagging */
@@ -130,3 +125,4 @@ static const Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
