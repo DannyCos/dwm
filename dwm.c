@@ -99,6 +99,7 @@ struct Client {
 	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen;
 	Client *next;
 	Client *snext;
+	double opacity;
 	Monitor *mon;
 	Window win;
 };
@@ -143,6 +144,7 @@ typedef struct {
 	const char *title;
 	unsigned int tags;
 	int isfloating;
+	double opacity;
 	int monitor;
 } Rule;
 
@@ -218,6 +220,7 @@ static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void toggletag(const Arg *arg);
 static void toggleview(const Arg *arg);
+static void toggleopacity(const Arg *arg);
 static void unfocus(Client *c, int setfocus);
 static void unmanage(Client *c, int destroyed);
 static void unmapnotify(XEvent *e);
@@ -1760,6 +1763,20 @@ toggleview(const Arg *arg)
 		focus(NULL);
 		arrange(selmon);
 	}
+}
+
+void
+toggleopacity(const Arg *arg)
+{
+	if (!selmon->sel)
+		return;
+
+	if(selmon->sel->opacity < 1.0)
+		selmon->sel->opacity = 1.0;
+	else
+		selmon->sel->opacity = defaultopacity;
+
+	opacity(selmon->sel, selmon->sel->opacity);
 }
 
 void
