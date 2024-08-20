@@ -10,7 +10,7 @@ static const unsigned int snap      = 30;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int focusonwheel       = 0;
-static const double defaultopacity  = 0.89;
+static const double defaultopacity  = 1.0;
 static const char *fonts[]          = { "Iosevka:size=12" };
 static const char dmenufont[]       = "Hack:size=12";
 static unsigned int baralpha        = 0xd0;
