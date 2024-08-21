@@ -9,6 +9,7 @@ static const unsigned int gappx     = 30;        /* gaps between windows */
 static const unsigned int snap      = 30;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int user_bg	    = 2;	/* spacing around the bar's font */
 static const int focusonwheel       = 0;
 static const double defaultopacity  = 1.0;
 static const char *fonts[]          = { "Iosevka:size=12" };
